@@ -1,0 +1,10 @@
+os: linux
+dist: focal
+language: java
+jdk: openjdk15
+addons:
+  sonarcloud:
+    organization: stefanobelli
+    token: 2b0e56b2e3ad4363d4a9214b53e8d0b337a9c77d
+script: ant build
+after_success: sonar-scanner
